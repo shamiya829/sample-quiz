@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accounting Questions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accounting Questions Chatbot</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="container">
+      <h1>Breaking Into Wall Street 400 - Accounting Questions</h1>
+      <p>
+        I will ask you a series of accounting questions. Please type your answer
+        and press enter.
+      </p>
 
-<body>
-  <div class="container">
-    <h1>Breaking Into Wall Street 400 Accounting Questions Chatbot</h1>
-    <p>I will ask you a series of accounting questions. Please type your answer and press enter.</p>
-    <p>To quit, type "done".</p>
+      <div class="question-container">
+        <h2>Question <span id="question-number"></span>:</h2>
+        <p id="question"></p>
+        <label for="answer-input">Your Answer:</label>
+        <input type="text" id="answer-input" autofocus />
+        <button id="submit-answer">Submit</button>
+        <button id="quit">Quit</button>
+      </div>
 
-    <div class="question-container">
-      <h2>Question <span id="question-number"></span>: <span id="question"></span></h2>
-      <label for="answer-input">Your Answer:</label>
-      <input type="text" id="answer-input" autofocus>
-      <button id="submit-answer">Submit</button>
-      <button id="quit">Quit</button>
+      <div class="answer-container">
+        <p><strong>Answer:</strong> <span id="correct-answer"></span></p>
+        <button id="continue">Continue</button>
+      </div>
     </div>
-
-    <div class="answer-container">
-      <p><strong>Answer:</strong> <span id="correct-answer"></span></p>
-      <button id="continue">Continue</button>
-    </div>
-  </div>
-  <script src="question.js"></script>
-  <script src="script.js"></script>
-</body>
-
+    <script src="question.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

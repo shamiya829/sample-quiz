@@ -1,3 +1,9 @@
+/* Box sizing rule */
+* {
+    box-sizing: border-box;
+}
+
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -9,24 +15,90 @@ body {
     height: 100vh;
 }
 
+/* Container styles */
 .container {
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Question styles */
+.question-container {
+    display: block;
+}
+
+.question-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* Answer styles */
 .answer-container {
     display: none;
 }
 
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 0.5rem 1rem;
+.correct-answer {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Text input styles */
+input[type="text"] {
+    font-size: 1rem;
+    padding: 0.5rem;
     margin-top: 1rem;
-    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Button styles */
+button {
+    background-color: #00bfff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 20px;
     border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 200px; /* Set the maximum width */
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #00a3cc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Quit button styles */
+#quit {
+    margin-top: 2rem;
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 90%;
+    }
 }
